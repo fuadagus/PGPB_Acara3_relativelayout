@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_hero">Login</string>
+    <string name="login_txtbtn">Log In</string>
+    <string name="masukkan_password">Masukkan password</string>
+    <string name="masukkan_username">Masukkan Username</string>
+</resources>

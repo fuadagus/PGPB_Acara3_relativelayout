@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:text="@string/login_hero"
+            android:textAppearance="@style/login_hero">
+
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/username_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/username_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/username"
+                android:textAppearance="@style/textview_form" />
+
+            <EditText
+                android:layout_alignBaseline="@id/username_label"
+                android:layout_toEndOf="@id/username_label"
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/masukkan_username"
+                android:imeOptions="actionNext"
+                android:lineSpacingExtra="4sp"
+                android:nextFocusForward="@id/password"
+                android:singleLine="true"
+                android:textAppearance="@style/edittext_form" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/password_contaianer"
+            android:layout_below="@id/username_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/password_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:lineSpacingExtra="1sp"
+                android:text="@string/password"
+                android:textAppearance="@style/textview_form">
+                ></TextView>
+
+            <EditText
+                android:layout_alignBaseline="@id/password_label"
+                android:layout_toEndOf="@id/password_label"
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/masukkan_password"
+                android:imeOptions="actionNext"
+                android:lineSpacingExtra="4sp"
+                android:nextFocusForward="@id/btn_login"
+                android:singleLine="true"
+                android:textAppearance="@style/edittext_form" />
+        </RelativeLayout>
+
+        <Button
+            android:layout_below="@id/password_contaianer"
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/login_bg"
+
+            android:text="@string/login_txtbtn" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
